@@ -1,0 +1,27 @@
+-- CreateTable
+CREATE TABLE "Engagement" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "clientName" TEXT NOT NULL,
+    "region" TEXT NOT NULL DEFAULT 'West USA',
+    "hqCity" TEXT,
+    "accountExecutive" TEXT,
+    "pocName" TEXT,
+    "pocTitle" TEXT,
+    "pocEmail" TEXT,
+    "status" TEXT NOT NULL DEFAULT 'Proposal',
+    "engagementModel" TEXT,
+    "dateLastContact" DATETIME,
+    "nextSteps" TEXT,
+    "nextFollowupDate" DATETIME,
+    "contractValue" REAL NOT NULL DEFAULT 0,
+    "startDate" DATETIME,
+    "endDate" DATETIME,
+    "practiceArea" TEXT,
+    "teamSize" INTEGER NOT NULL DEFAULT 0,
+    "industryVertical" TEXT,
+    "priority" TEXT NOT NULL DEFAULT 'Medium',
+    "stage" TEXT NOT NULL DEFAULT 'Prospecting',
+    "notes" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);

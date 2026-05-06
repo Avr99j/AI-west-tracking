@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../data/westai.db"
+}
+
+model Engagement {
+  id                 Int       @id @default(autoincrement())
+  clientName         String
+  region             String    @default("West USA")
+  hqCity             String?
+  accountExecutive   String?
+  pocName            String?
+  pocTitle           String?
+  pocEmail           String?
+  status             String    @default("Proposal")
+  engagementModel    String?
+  dateLastContact    DateTime?
+  nextSteps          String?
+  nextFollowupDate   DateTime?
+  contractValue      Float     @default(0)
+  startDate          DateTime?
+  endDate            DateTime?
+  practiceArea       String?
+  teamSize           Int       @default(0)
+  industryVertical   String?
+  priority           String    @default("Medium")
+  stage              String    @default("Prospecting")
+  notes              String?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+}
